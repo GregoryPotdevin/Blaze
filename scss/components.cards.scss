@@ -21,12 +21,44 @@
   @include card__content--divider;
 }
 
+.c-card__content--divider--primary {
+  @include card__content--divider--primary;
+}
+
+.c-card__content--divider--secondary {
+  @include card__content--divider--secondary;
+}
+
+.c-card__content--divider--success {
+  @include card__content--divider--success;
+}
+
+.c-card__content--divider--error {
+  @include card__content--divider--error;
+}
+
 .c-card__item {
   @include card__item;
 }
 
 .c-card__item--divider {
   @include card__item--divider;
+}
+
+.c-card__item--divider--primary {
+  @include card__item--divider--primary;
+}
+
+.c-card__item--divider--secondary {
+  @include card__item--divider--secondary;
+}
+
+.c-card__item--divider--success {
+  @include card__item--divider--success;
+}
+
+.c-card__item--divider--error {
+  @include card__item--divider--error;
 }
 
 .c-card--grouped {

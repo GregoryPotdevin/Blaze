@@ -27,16 +27,28 @@
   font-weight: $card-divider-font-weight;
 }
 
+@mixin card__content--divider--color($background-color: $card-divider-background-color, $color: $card-divider-color) {
+  background-color: $background-color;
+  color: $color;
+}
+
+@mixin card__content--divider--primary {
+  @include card__content--divider--color($card-divider-primary-background-color);
+}
+@mixin card__content--divider--secondary {
+  @include card__content--divider--color($card-divider-secondary-background-color);
+}
+@mixin card__content--divider--success {
+  @include card__content--divider--color($card-divider-success-background-color);
+}
+@mixin card__content--divider--error {
+  @include card__content--divider--color($card-divider-error-background-color);
+}
+
 @mixin card__item {
   padding: $card-item-padding;
   &:not(:last-child) {
     border-bottom: $card-border;
-  }
-}
-
-@mixin card__item--borderless {
-  &:not(:last-child) {
-    border-bottom: 0;
   }
 }
 
@@ -48,6 +60,33 @@
 
 @mixin card__item--divider {
   @include card__content--divider;
+}
+
+@mixin card__item--divider--color($background-color: $card-divider-background-color, $color: $card-divider-color) {
+  background-color: $background-color;
+  color: $color;  
+  &:not(:last-child) {
+    border-bottom: $card-border-width $card-border-style $background-color;
+  }
+}
+
+@mixin card__item--divider--primary {
+  @include card__item--divider--color($card-divider-primary-background-color);
+}
+@mixin card__item--divider--secondary {
+  @include card__item--divider--color($card-divider-secondary-background-color);
+}
+@mixin card__item--divider--success {
+  @include card__item--divider--color($card-divider-success-background-color);
+}
+@mixin card__item--divider--error {
+  @include card__item--divider--color($card-divider-error-background-color);
+}
+
+@mixin card__item--borderless {
+  &:not(:last-child) {
+    border-bottom: 0;
+  }
 }
 
 @mixin card__item--hover {
